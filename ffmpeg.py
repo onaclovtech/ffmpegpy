@@ -6,7 +6,7 @@ class ffmpeg:
     
     def getFrameRate(self, filename, force=''):
       temp = ''
-      path = os.path.dirname(os.path.realpath(__file__))
+      path = os.path.dirname(os.path.realpath(__file__)).strip('ffmpegpy')
       path = '\ '.join(path.split(' '))+ '/' + filename
       try:
          print 'ffmpeg ' + force + ' -i ' + path
